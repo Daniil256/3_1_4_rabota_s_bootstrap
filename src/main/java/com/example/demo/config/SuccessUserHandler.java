@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.Set;
 
 @Component
+
 public class SuccessUserHandler implements AuthenticationSuccessHandler {
 
     @Override

@@ -31,7 +31,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/registration", "/login").not().fullyAuthenticated()
                         .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN")
                         .requestMatchers("/user").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-                        .requestMatchers("/", "/styles/**").permitAll()
+                        .requestMatchers("/**", "/styles/**").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(e -> e.loginPage("/login")
                         .usernameParameter("email")
